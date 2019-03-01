@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrapping Data Science in a Large Organisation</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Riaz Arbi, Data Scientist, City of Cape Town" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Bootstrapping Data Science in a Large Organisation
+## 🤖<br/>How FOSS and containers can help us do real work
+### Riaz Arbi, Data Scientist, City of Cape Town
+### 2016/12/12 (updated: 2019-03-01)
+
+---
+
+
+
+
+class: inverse, middle, center
+
+![🤖](programmer_slacking_off.jpg)
+
+
+???
+
+
+---
+
+# Why do companies hire data scientists?
+
+- Numerical sophistication: Increase efficiencies with (regular) statistics
+
+--
+
+- Automation: Increase productivity by automating parts of workers jobs
+
+--
+
+- Exploration: Learn something aboutt their business they didn't know
+
+--
+
+- Experimentation: "We don't want to get left behind"
+
+--
+
+- Unify large silos: Get underneath the BI layer, connect different large systems 
+
+--
+
+- To push the technical edge: IoT | agile | cloud | NoSQL | Blockchain | Hive-mind | Singularity  
+
+---
+
+# Necessary priors
+
+- Numerical sophistication: Do we have software that does this math?
+
+
+- Automation: Do we have triggering systems on place?
+
+
+- Exploration: Can we connect to our underlying databases? 
+
+
+- Experimentation: Has the business performed an 80/20 exercise? 
+
+
+- Unify large silos: Is there DB admin skill to open these dbs up? 
+
+
+- To push the technical edge: How to owners of exisiting technological stack feel about this?
+
+--
+
+![Nope](nope.gif)
+
+---
+# Getting work done
+
+Traditional Corporate IT concerns - 
+
+- Multiple versions of the truth
+- Technical debt
+- Security
+- Stability
+- Providing uniform tools to workers across the organisation
+
+These are important considerations!
+
+![IT takes security seriously](mordac.jpg)
+
+---
+# Getting work done
+
+Typical Constraints -
+
+- Machines have to use enterprise software [MS Office / Sharepoint / SAP]
+- No admin access to laptops
+- If it is on the corporate network, IT totally controls the stack
+- Server internet access is strictly controlled
+
+--
+
+Solution 1:
+
+Flash drives, and your macbook from home
+
+1. Insecure
+2. Compute limited
+3. Maybe against the rules
+4. How will you possibly productionize?
+
+---
+# Getting work done
+
+Typical Constraints -
+
+- Machines have to use enterprise software [MS Office / Sharepoint / SAP]
+- No admin access to laptops
+- If it is on the corporate network, IT totally controls the stack
+- Server internet access is strictly controlled
+
+--
+
+Solution 2:
+
+Wait for the organisation to catch up
+
+1. Work on Excel
+2. Manually download data using enterprise application UI
+3. Work with IT to refactor models into enterprise-compatible code
+
+![Excel Complexity](excel_complexity.png)
+
+---
+# We can do better
+
+How do we do *good* data science, that *has impact*, in a *low-cost*, *low-risk* way?
+
+--
+
+**Build a system that does everything you need it to**
+
+--
+
+- Don't distract other departments from their work
+
+--
+
+- Don't hire anyone else
+
+--
+
+- Don't compromise existing systems
+
+--
+
+- Don't use the cloud, don't spend any money or pay for any licenses!
+
+--
+
+**Achievable?**
+
+--
+
+![Nope](nope.gif)
+
+
+---
+
+# Ideal system specifications
+
+- *Good interoperability:* can our systems talk to each other? Can they talk to anybody?
+
+--
+
+- *Large, unstructured storage with fine-grained control:* can we dump data somewhere? can we secure access? can we make it available to anybody on the network?
+
+--
+
+- *Code repositories:* can new work be versioned? Multiple collaborators? Branching for experimentation?
+
+--
+
+- *Code review:* do we have regular over-the-shoulder converstaions about what our developers are doing?
+
+--
+
+- *General purpose job scheduling:* do we know how to fire scripts
+
+--
+
+- *Disposable, scalable environments:* how long does it take to give someone an isolated environment with 2 cores and 2GB ram? What about 16 cores? What about 64?
+
+
+---
+# Roadmap: Get started on a laptop
+
+![Get Started](1.png)
+---
+
+# Roadmap: Get an isolated server
+
+![Get Server](2.png)
+
+---
+# Roadmap: Add storage capacity
+
+![Store Data](3.png)
+---
+# Roadmap: Add good code practices
+
+![Code Review](4.png)
+---
+# Roadmap: Start building pipelines
+
+![Pipelines](5.png)
+---
+# Roadmap: Unify auth
+
+![Multi-tenant](6.png)
+---
+# Roadmap: Integrate
+
+![Integrate](7.png)
+---
+# Some of our containers
+
+`cityofcapetown/datascience`   
+tags: `base, python, python_gpu, R, jupyter, jupyter_gpu, R, R_nonstandard, rstudio_shiny`
+
+`cityofcapetown/nginx_proxy`  
+`cityofcapetown/docker_wui`  
+`cityofcapetown/docker_mkdocs_deploy`  
+`cityofcapetown/airflow`  
+
+---
+# Back to IT Concerns
+
+
+- *Multiple versions of the truth* -&gt; Pipelines + code version control = auditability
+- *Technical debt* -&gt; Provide access to model predictions via API; swap code underneath if needed. All tools are fully cloud compatible and easy to migrate.
+- *Security* -&gt; Isolated from corporate network. Isolated into VMs. Isolated into containers. Code transparently housed in git.
+- *Stability* -&gt; Isolation and limiting of processes via container.
+- *Providing uniform tools to workers across the organisation* - All UI access via browser (not IE though, Jupyter!)
+
+---
+
+# Costs
+
+## Money
+- *Hardware:* R0 for decommissioned server or cluster of decommissioned consumer towers; Up to ~R1m for a fully loaded server.
+
+--
+
+- *Software:* R0
+
+--
+
+- *New hires:* R0
+
+--
+
+## Time
+
+--
+
+- *Admin load:* A day a week
+
+--
+
+## Obligations
+
+--
+
+- This is Open Source! Contribute upstream. 
+
+---
+# Enterprise support
+
+## If you *reallly* want to spend money
+
+- KVM -&gt; Get enterprise Linux (Red Hat / SUSE / Ubuntu etc)
+- Docker CE -&gt;  Docker EE
+- Gitlab EE -&gt; Activate License
+- Minio -&gt; Minio SUBNET
+- RStudio Server -&gt; RStudio Server Pro
+- NGINX -&gt; NGINX Plus
+
+...and all the consultants you can afford
+
+---
+class: inverse, middle, center
+
+# Now we can get to work!
+
+![DS Slacking](data_scientist_slacking_off.png)
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
