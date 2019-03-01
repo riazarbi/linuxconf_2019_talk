@@ -37,7 +37,7 @@ class: inverse, middle, center
 
 --
 
-- Exploration: Learn something aboutt their business they didn't know
+- Exploration: Learn something about their business they didn't know
 
 --
 
