@@ -1,7 +1,7 @@
 ---
 title: "Bootstrapping Data Science in a Large Organisation"
 subtitle: "🤖<br/>How FOSS and containers can help us do real work"
-author: "Riaz Arbi, Data Scientist, City of Cape Town"
+author: "Riaz Arbi"
 date: "2016/12/12 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
@@ -225,16 +225,6 @@ How do we do *good* data science, that *has impact*, in a *low-cost*, *low-risk*
 # Roadmap: Integrate
 
 ![Integrate](7.png)
----
-# Some of our containers
-
-`cityofcapetown/datascience`   
-tags: `base, python, python_gpu, R, jupyter, jupyter_gpu, R, R_nonstandard, rstudio_shiny`
-
-`cityofcapetown/nginx_proxy`  
-`cityofcapetown/docker_wui`  
-`cityofcapetown/docker_mkdocs_deploy`  
-`cityofcapetown/airflow`  
 
 ---
 # Back to IT Concerns
