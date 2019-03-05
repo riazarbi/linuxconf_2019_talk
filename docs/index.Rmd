@@ -2,7 +2,7 @@
 title: "Bootstrapping Data Science in a Large Organisation"
 subtitle: "🤖<br/>How FOSS and containers can help us do real work"
 author: "Riaz Arbi"
-date: "2016/12/12 (updated: `r Sys.Date()`)"
+date: "2019-02-20 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     css: [default, metropolis, metropolis-fonts]
@@ -33,7 +33,7 @@ class: inverse, middle, center
 
 --
 
-- Automation: Increase productivity by automating parts of workers jobs
+- Automation: Increase productivity by automating parts of workers' jobs
 
 --
 
@@ -103,14 +103,14 @@ Typical Constraints -
 
 --
 
-Solution 1:
+Solution 1: BYOD
 
 Flash drives, and your macbook from home
 
 1. Insecure
 2. Compute limited
 3. Maybe against the rules
-4. How will you possibly productionize?
+4. How will you possibly productionise?
 
 ---
 # Getting work done
