@@ -17,19 +17,29 @@ output:
 options(htmltools.dir.version = FALSE)
 ```
 
-class: inverse, middle, center
-
-![🤖](programmer_slacking_off.jpg)
-
-
 ???
 
+---
+
+# Topics
+
+## - Is the organisation prepared for data science workflows?  
+
+## - Getting work done  
+
+## - Building a free, scalable, enterprise-grade data science environment (
+
+---
+
+class: inverse, middle, center
+
+# Is the organisation prepared for data science workflows?
 
 ---
 
 # Why do companies hire data scientists?
 
-- Numerical sophistication: Increase efficiencies with (regular) statistics
+- Data-drive decision making: Increase efficiencies with (regular) statistics
 
 --
 
@@ -49,13 +59,13 @@ class: inverse, middle, center
 
 --
 
-- To push the technical edge: IoT | agile | cloud | NoSQL | Blockchain | Hive-mind | Singularity  
+- To push the technical edge: IoT | agile | cloud | data lakes | Blockchain | AI  
 
 ---
 
 # Have we got the necessary priors?
 
-- Numerical sophistication: Do we have software that does this math?
+- Data-driven decision making: Do we have software that does this math?
 
 
 - Automation: Do we have triggering systems on place?
@@ -75,17 +85,22 @@ class: inverse, middle, center
 --
 
 ![Nope](nope.gif)
+---
+
+class: inverse, middle, center
+
+# Getting work done
 
 ---
 # Getting work done
 
 Traditional Corporate IT concerns - 
 
-- Multiple versions of the truth
-- Technical debt
-- Security
-- Stability
-- Providing uniform tools to workers across the organisation
+- Multiple versions of the truth: departments choose the math that flatters them
+- Technical debt: data science tools are notoriously fast-moving
+- Security: arbitrary code execution!
+- Stability: spaghetti code processing pipelines
+- Preserving inter-departmental interoperability: proliferation of `.R`, `.py`, `.ipynb`, `.Rmd`, `.html` files.
 
 These are important considerations!
 
@@ -109,7 +124,7 @@ Flash drives, and your macbook from home
 
 1. Insecure
 2. Compute limited
-3. Maybe against the rules
+3. May be against the rules
 4. How will you possibly productionise?
 
 ---
@@ -169,8 +184,12 @@ How do we do *good* data science, that *has impact*, in a *low-cost*, *low-risk*
 
 
 ---
+class: inverse, middle, center
 
-# Ideal system specifications
+# Building a free, scalable, enterprise-grade data science environment
+
+---
+# Ideal system requirements
 
 - *Good interoperability:* can our systems talk to each other? Can they talk to anybody?
 
@@ -184,7 +203,7 @@ How do we do *good* data science, that *has impact*, in a *low-cost*, *low-risk*
 
 --
 
-- *Code review:* do we have regular over-the-shoulder converstaions about what our developers are doing?
+- *Code review:* do we have regular over-the-shoulder conversations about what our developers are doing?
 
 --
 
@@ -230,11 +249,11 @@ How do we do *good* data science, that *has impact*, in a *low-cost*, *low-risk*
 # Back to IT Concerns
 
 
-- *Multiple versions of the truth* -> Pipelines + code version control = auditability
-- *Technical debt* -> Provide access to model predictions via API; swap code underneath if needed. All tools are fully cloud compatible and easy to migrate.
-- *Security* -> Isolated from corporate network. Isolated into VMs. Isolated into containers. Code transparently housed in git.
-- *Stability* -> Isolation and limiting of processes via container.
-- *Providing uniform tools to workers across the organisation* - All UI access via browser (not IE though, Jupyter!)
+- **Multiple versions of the truth** -> Pipelines + code version control = auditability
+- **Technical debt** -> Provide access to model predictions via API; swap code underneath if needed. All tools are fully cloud compatible and easy to migrate.
+- **Security** -> Isolated from corporate network. Isolated into VMs. Isolated into containers. Code transparently housed in git.
+- **Stability** -> Isolation and limiting of processes via container.
+- **Preserving inter-departmental interoperability** - All UI access via browser (not IE though, Jupyter!)
 
 ---
 
@@ -265,7 +284,7 @@ How do we do *good* data science, that *has impact*, in a *low-cost*, *low-risk*
 
 --
 
-- This is Open Source! Contribute upstream. 
+- This is Open Source! Participate. Ask questions, help with documentation, submit feature requests. 
 
 ---
 # Enterprise support
