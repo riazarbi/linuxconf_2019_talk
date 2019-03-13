@@ -27,7 +27,7 @@ options(htmltools.dir.version = FALSE)
 
 ## - Getting work done  
 
-## - Building a free, scalable, enterprise-grade data science environment (
+## - Building a free, scalable, enterprise-grade data science environment 
 
 ---
 
@@ -180,9 +180,7 @@ How do we do *good* data science, that *has impact*, in a *low-cost*, *low-risk*
 
 --
 
-![Nope](nope.gif)
-
-
+![Nope](nope.gif)-
 ---
 class: inverse, middle, center
 
