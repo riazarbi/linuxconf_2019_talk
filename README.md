@@ -1,5 +1,5 @@
 # datacon_2019_talk
 
-Slides for the talk I am giving at DataCon 2019 in Cape Town
+Slides for the talk I am giving at LinuxConf 2019 in Johannesburg
 
-https://riazarbi.github.io/datacon_2019_talk/index.html
+https://riazarbi.github.io/linuxconf_2019_talk/index.html
