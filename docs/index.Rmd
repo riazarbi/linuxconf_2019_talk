@@ -23,9 +23,7 @@ options(htmltools.dir.version = FALSE)
 
 # I WEEP
 
-Did you see **Karl's talk on kubernetes in 30 minutes? It is WAAAY easier than this. 
-
-I have wasted so much time.
+Did you see Karl's talk on kubernetes in 30 minutes? It is WAAAY easier than this. 
 
 BUT this does still contain a lot of useful information if you are stuck in a bare metal environment.
 
